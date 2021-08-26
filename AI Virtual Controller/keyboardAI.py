@@ -31,7 +31,6 @@ def drawAll(img, buttonList):
     out = img.copy()
     alpha = 0.2
     mask = imgNew.astype(bool)
-    print(mask.shape)
     out[mask] = cv2.addWeighted(img,alpha,imgNew,1-alpha,0)[mask]
     return out
 
